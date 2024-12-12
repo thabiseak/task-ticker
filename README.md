@@ -1,6 +1,6 @@
 # To-Do List Web Application
 
-![To-Do List](https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)
+![To-Do List](https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif)
 
 A simple and interactive To-Do List application built with HTML, CSS, and JavaScript for managing tasks efficiently. This project uses a RESTful API to handle task data stored on a server, allowing users to add, view, and delete tasks. It includes user authentication, making it possible for each user to have a personalized task list.
 
@@ -24,8 +24,8 @@ A simple and interactive To-Do List application built with HTML, CSS, and JavaSc
 
 1. **Clone this repository**:
     ```sh
-    git clone https://github.com/yourusername/todo-list-webapp.git
-    cd todo-list-webapp
+    git clone https://github.com/thabiseak/task-ticker.git
+    cd task-ticker
     ```
 
 2. **Update the API endpoint URLs** in the JavaScript code if necessary:

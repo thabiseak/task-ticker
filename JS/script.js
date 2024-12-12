@@ -42,54 +42,34 @@ document.querySelector(".sign-in form").addEventListener("submit", (event) => {
   }
 });
 
-function signUpUser() {
-  // Get values from inputs
-  const username = document.getElementById('sign-up-user').value;
-  const password = document.getElementById('sign-up-pass').value;
-  const confirmPassword = document.getElementById('sign-up-ConPass').value;
+async function signUpUser(event) {
+  event.preventDefault();
 
-  // Ensure that the password and confirmation match
-  if (password !== confirmPassword) {
-    alert("Passwords do not match!");
-    return;
-  }
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-  // Prepare data for sending
-  const userData = {
-    userID: 0,  // Can be customized as needed
-    userName: username,
-    password: password
-  };
+  try {
+    const response = await fetch('http://taskticker.runasp.net/api/User/AddNewUser', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+    });
 
-  // Send data using fetch
-  fetch('https://taskticker.runasp.net/api/User/AddNewUser', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(userData)
-  })
-  .then(response => {
     if (!response.ok) {
-      return response.json().then(errorData => {
-        throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorData.message}`);
-      });
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
-  })
-  .then(data => {
-    // Add logic here to handle the response
-    console.log('User created successfully:', data);
-    alert("User created successfully!");
-  })
-  .catch(error => {
+
+    const data = await response.json();
+    console.log('User signed up successfully:', data);
+  } catch (error) {
     console.error('Error:', error);
-    alert("An error occurred while creating the user: " + error.message);
-  });
+    alert('Failed to sign up user. Please try again later.');
+  }
 }
 
-// Call the signUpUser function when the sign-up button is clicked
-document.getElementById('Up').addEventListener('click', signUpUser);
+document.getElementById('signUpButton').addEventListener('click', signUpUser);
 
 // Function to fetch tasks from the API
 const userID = localStorage.getItem("userID");
