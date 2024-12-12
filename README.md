@@ -8,11 +8,11 @@ A simple and interactive To-Do List application built with HTML, CSS, and JavaSc
 
 ## Features
 
-- **User Registration & Login**: Users can create accounts and log in to manage their tasks.
-- **Add Tasks**: Users can add new tasks to their to-do list.
-- **View Tasks**: Displays tasks in a tabular format with task names, statuses (Completed/Incomplete), and actions.
-- **Delete Tasks**: Users can delete tasks, and the interface updates dynamically.
-- **Task Status**: Displays each task's completion status, with "Incomplete" and "Completed" labels.
+- ![User Registration & Login](https://img.shields.io/badge/User%20Registration%20%26%20Login-%E2%9C%94%EF%B8%8F-brightgreen) **User Registration & Login**: Users can create accounts and log in to manage their tasks.
+- ![Add Tasks](https://img.shields.io/badge/Add%20Tasks-%E2%9C%94%EF%B8%8F-brightgreen) **Add Tasks**: Users can add new tasks to their to-do list.
+- ![View Tasks](https://img.shields.io/badge/View%20Tasks-%E2%9C%94%EF%B8%8F-brightgreen) **View Tasks**: Displays tasks in a tabular format with task names, statuses (Completed/Incomplete), and actions.
+- ![Delete Tasks](https://img.shields.io/badge/Delete%20Tasks-%E2%9C%94%EF%B8%8F-brightgreen) **Delete Tasks**: Users can delete tasks, and the interface updates dynamically.
+- ![Task Status](https://img.shields.io/badge/Task%20Status-%E2%9C%94%EF%B8%8F-brightgreen) **Task Status**: Displays each task's completion status, with "Incomplete" and "Completed" labels.
 
 ## Tech Stack
 
